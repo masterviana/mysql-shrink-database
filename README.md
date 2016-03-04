@@ -13,12 +13,15 @@ Step 02) Drop all databases (except mysql, performance_schema, and information_s
 
 Step 03) Shutdown mysql
 
-Step 04) Add the following lines to /etc/my.cnf
+Step 04) Add the following lines to /etc/my.cnf<br>
+```bash
   [mysqld]
   innodb_file_per_table
   innodb_flush_method=O_DIRECT
   innodb_log_file_size=1G
   innodb_buffer_pool_size=4G
+```
+
 
 Step 05) Delete ibdata1, ib_logfile0 and ib_logfile1
 
